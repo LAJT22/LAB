@@ -1,4 +1,5 @@
 import React from 'react';
+import TransactionItem from './TransactionItem/TransactionItem';
 
 const Transactions = () => {
   return (
@@ -7,6 +8,7 @@ const Transactions = () => {
         <h2 className="text-xl text-white">Recent transactions</h2>
         <button className="bg-transparent text-xl text-white">See All</button>
       </div>
+      <TransactionItem/>
     </div>
   );
 };
