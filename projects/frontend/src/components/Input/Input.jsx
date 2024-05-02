@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Input = ({ type, placeholder }) => {
+const Input = ({ type, placeholder, width }) => {
   return (
     <input
-      className="border-b-2 border-b-white bg-transparent placeholder:text-gray-400 p-3 w-[75%]"
+      className={` ${width} w-full border-b-2 border-b-white bg-transparent p-3 text-white placeholder:text-gray-400  `}
       type={type}
       placeholder={placeholder}
     />

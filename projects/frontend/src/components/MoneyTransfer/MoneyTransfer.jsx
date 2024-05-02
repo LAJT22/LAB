@@ -10,8 +10,8 @@ const MoneyTransfer = () => {
     <div className="flex h-dvh flex-col items-center justify-start gap-10">
       <h2 className="mt-10 text-3xl font-bold text-white">Make a transfer</h2>
       <div className="flex h-[70%] w-[90%] flex-col items-center justify-around rounded-lg border-2 border-black bg-gray-700 p-6 text-white md:h-[70%]  md:w-[30%] ">
-        <Input type="text" placeholder="Enter the transfer name" />
-        <Input type="number" placeholder="Enter the amount $"></Input>
+        <Input width="md:w-[50%]" type="text" placeholder="Enter the transfer name" />
+        <Input width="md:w-[50%]" type="number" placeholder="Enter the amount $"></Input>
         <div className="flex w-full justify-around ">
           <div className="flex flex-col items-center gap-5">
             <label htmlFor="">Income</label>
