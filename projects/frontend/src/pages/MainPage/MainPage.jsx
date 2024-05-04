@@ -6,7 +6,7 @@ import UserBox from '../../components/UserBox/UserBox';
 
 const MainPage = () => {
   return (
-    <div className="relative flex h-dvh flex-col gap-10 items-center p-5">
+    <div className="mx-auto  flex h-dvh max-w-[1400px] flex-col items-center gap-10 p-5 pt-0 ">
       <UserBox />
       <AccountBallance />
       <Transactions />

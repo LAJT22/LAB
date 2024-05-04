@@ -1,13 +1,14 @@
 import React from 'react';
 
-const Button = ({ children, outline, onClick }) => {
+const Button = ({ children, outline, onClick, type, width }) => {
   return (
     <button
+      type={type}
       onClick={onClick}
       className={`${
         outline
-          ? 'w-[75%] rounded-full  text-white outline outline-2 text-sm p-2 md:text-lg outline-white md:w-[15%]'
-          : 'w-[75%] rounded-full bg-white text-black text-sm p-2 md:text-lg md:w-[15%]'
+          ? `${width}  outline-mainColor rounded-full p-2 text-sm text-black outline outline-2  md:text-lg`
+          : `${width} bg-mainColor rounded-full p-2 text-sm text-white  md:text-lg`
       }`}
     >
       {children}

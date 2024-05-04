@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FormContext } from '../../../Context/Context';
+import { RenderIcon } from '../../../Helpers/RenderIcon';
 
 const TransactionItem = () => {
+  const {
+    formValues: { transferName, amount, transactionType, option },
+  } = useContext(FormContext);
   return (
-    <div className="flex justify-between   text-white mt-10">
-      <div className='flex items-center gap-5'>
-        <img className='w-[5%]' src="https://www.creativefabrica.com/wp-content/uploads/2021/11/02/shopping-cart-icon-vector-illustration-Graphics-19544556-1.jpg" alt="" />
-        <p>Transfer name</p>
+    <div className="mt-5 flex   justify-between text-black md:mt-10">
+      <div className="flex items-center gap-5">
+        {option && RenderIcon(option)}
+        <p>{transferName}</p>
       </div>
-      <p>-300$</p>
+      {amount && (
+        <p>
+          {transactionType === 'income' ? '+' : '-'}
+          {amount}$
+        </p>
+      )}
     </div>
   );
 };

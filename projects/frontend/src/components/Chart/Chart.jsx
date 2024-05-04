@@ -28,7 +28,7 @@ export default function PieActiveArc() {
           position: { vertical: 'bottom', horizontal: 'middle' },
           padding: { bottom: -50 },
           labelStyle: {
-            fill: 'white',
+            fill: 'black',
           },
           itemGap: 20,
         },
