@@ -10,14 +10,14 @@ const MoneyTransfer = () => {
   const {
     formValues: { transferName, amount },
     handleInputChange,
-    handleSubmit,
+    createHandleSubmit,
   } = useContext(FormContext);
 
   return (
     <div className="flex h-dvh flex-col items-center gap-5 p-5 md:gap-10">
       <h2 className="mt-5 text-3xl font-bold text-black md:mt-10 ">Make a transfer</h2>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={createHandleSubmit(navigate)}
         className="bg-bgAccent flex h-[70%] w-[90%] flex-col items-center justify-around gap-4 rounded-lg border-2 border-black p-6  text-black shadow-xl md:h-[70%]  md:w-[30%]"
       >
         <Input

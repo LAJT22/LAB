@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const initialFormState = {
   transferName: '',
   amount: '',
@@ -16,9 +17,9 @@ export const FormContext = React.createContext({
 const FormProvider = ({ children }) => {
   const [formValues, setFormValues] = useState(initialFormState);
 
-  const handleSubmit = (e) => {
+  const createHandleSubmit = (navigate) => (e) => {
     e.preventDefault();
-
+    navigate('/')
     console.log('dziala');
   };
 
@@ -33,7 +34,7 @@ const FormProvider = ({ children }) => {
     <FormContext.Provider
       value={{
         formValues,
-        handleSubmit,
+        createHandleSubmit,
         handleInputChange,
       }}
     >
